@@ -31,8 +31,8 @@
 	<section class="body--browse">
 		<h2>Browse through a range of our crypto Products.</h2>
 		<a class="body--browse--link viewMore--anchor" href="javascript:void(0)">View More <img class="viewMore--svg" src="imgs/arrow.svg" alt="Hm.."></a>
-		<img class="body--browse--firstImg" src="imgs/packs.png" alt="">
-		<img class="body--browse--secondImg" src="imgs/car.png" alt="">
+		<div class="body--browse--firstImg"><div class="body--browse--firstImg--inner-div"></div></div>
+		<div class="body--browse--secondImg"></div>
 	</section>
 	<section class="body--graphic">
 		<h2>See a graphical representation of your finances via our crypto chart</h2>
@@ -49,25 +49,27 @@
 	</section>
 	<section class="footer">
 		<div class="footer__top">
-			<address>
-				<h3>Contact Address :</h3>
-				<a href="mailto:bodik264478@gmail.com" target="_blank">bodik264478@gmail.com</a>
-			</address>
-			<form>
+			<div class="footer__top__left">
+				<address>
+					<h3>Contact Address :</h3>
+					<a href="mailto:bodik264478@gmail.com" target="_blank">bodik264478@gmail.com</a>
+				</address>
+			</div>
+			<div class="footer__top__right">
 				<h4>Get Updates from us</h4>
-				<label class="footer__form--label">
-					<input type="text" name="Email field" placeholder="    Type Email address">
+				<form class="footer__top__right__form">
+					<input type="text" name="Email field" placeholder="Type Email address">
 					<input type="submit" name="Email submit" value="Send">
-				</label>
-			</form>
+				</form>
+			</div>
 		</div>
 		<hr>
 		<div class="footer__bottom">
-			<div>
+			<div class="footer__bottom_left">
 				<a href="javascript:void(0)">About Us</a>
 				<a href="javascript:void(0)">Contact Us</a>
 			</div>
-			<div>
+			<div class="footer__bottom_right>
 				<a href="javascript:void(0)">FAQ</a>
 				<a href="#top">Back top top</a>
 			</div>
