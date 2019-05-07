@@ -1,12 +1,13 @@
-body {
+		body {
 			margin: 0;
 			background: #fff;
 			font-family: 'Nunito', sans-serif;
 			overflow-y: auto;
 			overflow-x: hidden;
 		}
-		section:nth-child(n+2) {
-			padding-bottom: 2vh;
+		.body--browse, .body--graphic, .body--manage {
+			min-height: 42vw;
+			padding-bottom: 3vh;
 		}
 		.top {
 			position: relative;
@@ -81,11 +82,12 @@ body {
 		.body--welcome {
 			position: relative;
 			width: 100vw;
-			height: 26vh;
+			min-height: 21vh;
 			color: #333;
 			letter-spacing: 0.02em;
 		}
 		.body--welcome h2 {
+			margin-top: 3vw;
 			font-size: 1.66vw;
 			line-height: 2.21vw;
 			text-align: center;
@@ -104,7 +106,6 @@ body {
 		.body--browse {
 			position: relative;
 			width: 100vw;
-			height: calc(300/1285*100vw);
 		}
 		.body--browse h2 {
 			font-size: 3.125vw;
@@ -119,28 +120,44 @@ body {
 		.body--browse--link {
 			position: absolute;
 			left: 8.6vw;
-			top: 90%;
-
+			top: 82%;
 		}
-		.body--browse > img {
+		.body--browse--firstImg, .body--browse--secondImg {
 			position: absolute;
-			box-shadow: 0 0 30px 0 #777;
-			width: calc(287/355*27vw);
+			box-shadow: 0 0 12px 0 #777;
+			width: 21.7vw;
+			height: 17.6vw;
+			border-radius: 2.85px;
 		}
 		.body--browse--firstImg {
-			top: 25%;
+			background: url('imgs/packs.png') no-repeat;
+			background-size: cover;
+			top: 30%;
 			left: 51vw;
 			z-index: 2;
 		}
 		.body--browse--secondImg {
+			background: url('imgs/car.png') no-repeat;
+			background-size: cover;
 			top: 50%;
 			left: 67vw;
 			z-index: 3;
+		}
+		.body--browse--firstImg--inner-div {
+			background-color: rgba(255, 255, 255, 0.4);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 		}
 		.body--graphic, .body--manage {
 			position: relative;
 			width: 100vw;
 			height: calc(500/1440*100vw);
+		}
+		.body--graphic {
+			background-color: #fafafa;
 		}
 		.body--graphic h2, .body--manage h2 {
 			font-weight: 600;
@@ -158,10 +175,9 @@ body {
 		.body--graphic h2 {
 			position: relative;
 			left: 52%;
-			top: 9.5vw;
+			top: 9vw;
 			width: 38.3vw;
-			padding: 4px 0;
-			height: 70%;
+			height: 59%;
 		}
 		.body--graphic p {
 			position: relative;
@@ -212,52 +228,75 @@ body {
 			margin-left: 2px;
 		}
 		.footer {
-			background-color: #30292F;
 			position: relative;
 			bottom: 0;
 			width: 100vw;
-			height: 12vw;
 			min-height: 120px;
-			margin-top: 10vw;
 
+			background-color: #30292F;
 			color: rgba(255, 255, 255, 0.7);
 		}
 		.footer__top, .footer__bottom {
-			margin: 1.6vw 2vw 0 9.8vw;
-			width: 85vw;
+			margin: 0 6.85vw 0 9.65vw;
+			width: 83.5vw;
 			display: inline-flex;
 			justify-content: space-between;
 		}
-		.footer__top address a {
+		.footer__top {
+			margin-top: 4.3vw;
+		}
+		.footer__top_left h3 {
+			font-size: 1.25vw;
+			line-height: 1.73vw;
+		}
+		.footer__top__left address a {
 			color: #fff;
 			letter-spacing: 0.02em;
 			line-height: 2.3vw;
 			text-decoration: none;
 		}
-		.footer__top form {
-
-		}
-		.footer__top form h4 {
+		.footer__top__right h4 {
+			font-size: 1.25vw;
+			line-height: 1.49vw;
+			font-weight: 200;
+			font-style: normal;
 			transform: translateY(-25%);
 		}
-		.footer__form--label {
-			display: inline-flex;
-			height: 40px;
+		.footer__top__right__form {
+			display: flex;
+			width: 17.9vw;
+			margin-bottom: 15px;
 		}
-		.footer__form--label input[type="text"] {
-			flex: 3 3 auto;
+		.footer__top__right__form input[type="text"] {
+			width: 65%;
+  			height: 3vw;
+  			font-size: 0.9vw;
+  			border: 0;
+  			border-radius: 3px;
+  			color: rgba(62, 61, 61, 0.5);
+  			box-sizing: border-box;
+  			padding-left: .8vw;
 		}
-		.footer__form--label input[type="submit"] {
-			flex: 2 2 auto;
-			background-color: #1768AC;
-			border: 0;
-			color: #fff;
-			font-size: 1.12vw;
+		.footer__top__right__form input[type="submit"] {
+  			width: 35%;
+  			height: 3vw;
+  			border-style: none;
+  			border-radius: 3px;
+  			background: #1768AC;
+  			font-size: 1.11vw;
+  			line-height: 1.31vw;
+  			color: #fff;
+  			cursor: pointer;
+  			box-sizing: border-box;
+  			transform: translateX(-.2vw);
 		}
-		.footer__top h3, .footer__top h4 {
+		.footer__top h4 {
 			font-weight: 200;
 			font-style: normal;
 			margin: 1.5vw 0 .5vw 0;
+		}
+		.footer__bottom {
+			margin-bottom: 2.36vw;
 		}
 		.footer__bottom > div {
 			width: 10vw;
@@ -269,8 +308,16 @@ body {
 			color: rgba(255, 255, 255, 0.7);
 			text-decoration: none;
 		}
+		.footer__bottom_left {
+			font-size: 1.11vw;
+			line-height: 1.32vw;
+		}
+		.footer__bottom_right {
+			font-size: 1.25vw;
+			line-height: 1.46vw;
+		}
 		.footer hr {
-			margin-left: 9.8vw;
-			width: 85vw;
+			margin-left: 9.65vw;
+			width: 83.5vw;
 			border-color: rgba(218, 218, 218, 0.43);
 		}
